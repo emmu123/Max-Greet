@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Greet</title>
+    <meta name="description" content="Max Greet is a new and advanced welcome bot, suggestion , ranking etc.">
+    <meta name="theme-color" content="#F7941F">
+    <link rel="icon" type="image/png" href="l.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="l.png" alt="logo"></a>
+      <a href="#" class="desktop_navbar_link">Home</a>
+      <a href="#more" class="desktop_navbar_link scroll">Features</a>
+     <a href="#discord" class="desktop_navbar_link scroll">Community</a> 
+      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
+      <a href="https://short.fun-random-api.lol/maxgreet" class="desktop_navbar_link scroll">Invite Me</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="https://discord.gg/aN4dBVxn2Q" class="desktop_navbar_link2_scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="l.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#">Home</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#more">Features</a>
+        <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="https://short.fun-random-api.lol/maxgreet">Invite Me</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="l.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Max Greet<br></a>
+          <a class="main1_actcent">Your friendly welcome, leveling, suggestion, application bot</a><a>.</a>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">What we have</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273399388885042/1184824456284225556/image.png?ex=658d60c3&is=657aebc3&hm=f586c4de069b182dbcd34ff423ada8a743c6bb83ac1980214670291804d181bc&=&format=webp&quality=lossless&width=615&height=571">
+            <a class="main2_feature_headline">Feature 1</a>
+            <a class="main2_feature_text">Easy setup with just only one command.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273399388885042/1184824758429290526/image.png?ex=658d610b&is=657aec0b&hm=3ae4ab51f61f35be5301e06e4e3daee155d0e40e7700916a18f5dc2ee0421adb&=&format=webp&quality=lossless&width=887&height=563">
+            <a class="main2_feature_headline">Feature 2</a>
+            <a class="main2_feature_text">Fully customisable welcome message with many variables and tamplates.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273409560072244/1184873259708194938/image.png?ex=658d8e36&is=657b1936&hm=403ed08cecd7dc144963e68b16e378c8001d8b20dcce02c7a003192ca2f12644&=&format=webp&quality=lossless&width=881&height=571">
+            <a class="main2_feature_headline">Feature 3</a>
+            <a class="main2_feature_text">Fully customisable welcome image.</a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join the Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=888334535010430986&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Let's talk!</a>
+            <a class="main4_dc_description">・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br> </a>
+            <a href="https://discord.gg/D4JbQjG6Cr" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Who we are</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="Owner" src="https://images-ext-1.discordapp.net/external/AXtq96dgxRjpwxGG-DL632E4gMPNV0QSBqRhr1DSbTU/https/cdn.discordapp.com/avatars/863271170228486187/9a73a35dbe74c7233a4ea022ad5b4a41.webp?format=webp&width=160&height=160">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">Owner & Founder</a>
+              <a class="main5_admins_description_title" href="https://discord.com/users/980069165459198022">Emmu</a>
+            </div>
+          </div>
+          
+        </div>                 
+        </div>
+      </div>
+      <div id="commands"></div>
+      <div class="main3">
+        <a class="headline">Vote Me</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <div class="main3_join_content_div">
+              <a href="https://discordbotlist.com/bots/max-greet"><img src="https://discordbotlist.com/api/v1/bots/914106027606167602/widget"></a>
+           
+            </div>
+          </div>
+         
+                </div>
+              </div>
+            </div>
+    <footer class="copyright_div">
+      <a href="#" class="copyright">Made by Devansh Yadav 2023 © GreetHub</a>
+    </footer>
+  </body>
+</html>
