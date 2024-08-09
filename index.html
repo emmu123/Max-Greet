@@ -1,160 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Giveaway</title>
-<meta name="description" content="Max Giveaway is a new and advanced Giveaway bot.">
-<meta name="keywords" content="max giveaway, Giveaway bot, Discord bot, Discord , bot">
-<meta name="robots" content="index, follow">
-<meta name="copyright" content="@EMMU">
-<meta name="language" content="EN">
-  <meta name="revisit-after" content="5 days">
-<meta name="google-site-verification" content="q25gYIXVdC5RMxiakFP0Fu7OhGDiE-LxMPLPqBQ6AWo" />
-<meta name="distribution" content="global">
-<meta name="rating" content="general">
-        <meta property="og:image" content="lrbg.png">
-    <meta name="theme-color" content="#F7941F">
-      <link href="lrbg.png" rel="icon">
+    <title>Max Giveaway - Dark Theme</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Meta Description -->
+    <meta name="description" content="Max Giveaway: The ultimate Discord bot for creating seamless and engaging giveaways. Easily set up, customize, and manage giveaways in over 10 languages with 24/7 uptime and secure, fair selection processes.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Discord giveaway bot, Max Giveaway bot, Customizable giveaways, Discord bot for giveaways, Multi-language support bot, Giveaway management Discord, Secure giveaway bot, Easy setup giveaway bot, Discord community giveaways, 24/7 giveaway bot">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Max Giveaway - The Ultimate Discord Giveaway Bot">
+    <meta property="og:description" content="Max Giveaway: The ultimate Discord bot for creating seamless and engaging giveaways. Easily set up, customize, and manage giveaways in over 10 languages with 24/7 uptime and secure, fair selection processes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/images/preview-image.jpg">
+    <meta property="og:image:alt" content="Max Giveaway Bot Preview">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Max Giveaway - The Ultimate Discord Giveaway Bot">
+    <meta name="twitter:description" content="Max Giveaway: The ultimate Discord bot for creating seamless and engaging giveaways. Easily set up, customize, and manage giveaways in over 10 languages with 24/7 uptime and secure, fair selection processes.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/preview-image.jpg">
+    <meta name="twitter:image:alt" content="Max Giveaway Bot Preview">
+    <meta name="twitter:url" content="https://yourwebsite.com">
+
+    <!-- Meta Image for General Use -->
+    <meta name="image" content="https://yourwebsite.com/images/preview-image.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(45deg, #f39c12, #d35400);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #ffeaa7;
+            font-size: 1.2em;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .feature {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 30px;
+            width: calc(33% - 40px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s;
+        }
+        .feature:nth-child(odd) {
+            transform: translateX(-100px);
+        }
+        .feature:nth-child(even) {
+            transform: translateX(100px);
+        }
+        .feature.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .feature:hover {
+            background-color: #292929;
+            transform: translateY(-10px);
+        }
+        .feature .icon {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+        .feature h3 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .feature p {
+            line-height: 1.7;
+            font-size: 1em;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: #f39c12;
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .cta-button:hover {
+            background-color: #d35400;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            margin-top: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .feature {
+                width: calc(50% - 40px);
+                transform: translateY(50px);
+            }
+        }
+        @media (max-width: 500px) {
+            .feature {
+                width: calc(100% - 40px);
+                transform: translateY(50px);
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
+        .main4 {
+            min-height: 10rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main4_dc_widget {
+            border-radius: var(--roundness);
+            border: 2px solid #000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .main4_dc_div {
+            margin: 2rem;
+            display: flex;
+            flex-direction: row;
+            background-color: var(--background2);
+            border-radius: var(--roundness);
+            max-width: 48rem;
+        }
+
+        .main4_dc_description_div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main4_dc_description_title {
+            margin: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .main4_dc_description {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .main4_dc_button_a {
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            border: solid var(--accent1) 1px;
+            border-radius: var(--roundness);
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+            transition: all .5s;
+        }
+
+        .main4_dc_button_a:hover {
+            border: solid 1px var(--accent2);
+            background-color: var(--accent2);
+            transform: scale(1.05);
+        }
+
+        .main4_dc_button {
+            padding: .5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        /* Centering Top.gg widget */
+        .topgg-widget-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+    </style>
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <nav class="desktop_navbar">
-      <a href="#"><img class="desktop_navbar_logo_img" src="l.png" alt="logo"></a>
-      <a href="#" class="desktop_navbar_link">Home</a>
-      <a href="#more" class="desktop_navbar_link scroll">Features</a>
-     <a href="#discord" class="desktop_navbar_link scroll">Community</a> 
-      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
-      <a href="https://discord.com/api/oauth2/authorize?client_id=914106027606167602&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fmaxgiveaway.hs.vc%2Fthanks.html&scope=bot+applications.commands+applications.commands.permissions.update" >Invite Me</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="https://dsc.gg/milcondev" class="desktop_navbar_link2_scroll">Join Us!</a>
-      </div>
-    </nav>
-    <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="lrbg.png" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#">Home</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#more">Features</a>
-        <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="https://discord.com/api/oauth2/authorize?client_id=914106027606167602&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fmaxgiveaway.hs.vc%2Fthanks.html&scope=bot+applications.commands+applications.commands.permissions.update">Invite Me</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
-    </div>
-    <div class="mainflex">
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="lrbg.png" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>Max Giveaway<br></a>
-          <a class="main1_actcent">Your friendly Giveaway bot</a><a>.</a>
-        </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
-      </div>
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">What we have</a>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273409560072244/1193553714443726868/image.png?ex=65ad2284&is=659aad84&hm=0090d26cefc1cebe6b9e47a8a1ab9641977a7a5150ac4c4dcad4602f569b62b3&=&format=webp&quality=lossless&width=1262&height=155">
-            <a class="main2_feature_headline">Feature 1</a>
-            <a class="main2_feature_text">Easy to start giveaway with just only one command.</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273409560072244/1193554449776509020/image.png?ex=65ad2333&is=659aae33&hm=32d499072d1ddbe88a0b91fb70c740e13b10954ea6c68f22239ca8393a073c30&=&format=webp&quality=lossless&width=628&height=571">
-            <a class="main2_feature_headline">Feature 2</a>
-            <a class="main2_feature_text">Button Type giveaway reaction</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="https://media.discordapp.net/attachments/967273409560072244/1193554709005484042/image.png?ex=65ad2371&is=659aae71&hm=0f1c8d45459221cf17a52b1fde1d932cb133fe633fc7b583a994dc2e328820d4&=&format=webp&quality=lossless&width=958&height=328">
-            <a class="main2_feature_headline">Feature 3</a>
-            <a class="main2_feature_text">More Commands !</a>
-          </div>
-        </div>
-      </div>
-      <div id="discord"></div>
-      <div class="main4">
-        <a class="headline">Join the Discord</a>
-        <div class="main4_dc_div">
-          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=888334535010430986&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">Let's talk!</a>
-            <a class="main4_dc_description">・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br> </a>
-            <a href="https://discord.gg/D4JbQjG6Cr" class="main4_dc_button_a">
-              <div class="main4_dc_button">Join</div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">Who we are</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="Owner" src="https://images-ext-1.discordapp.net/external/AXtq96dgxRjpwxGG-DL632E4gMPNV0QSBqRhr1DSbTU/https/cdn.discordapp.com/avatars/863271170228486187/9a73a35dbe74c7233a4ea022ad5b4a41.webp?format=webp&width=160&height=160">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">Owner & Founder</a>
-              <a class="main5_admins_description_title" href="https://discord.com/users/980069165459198022">Emmu</a>
-            </div>
-          </div>
-          
-        </div>                 
-        </div>
-      </div>
-      <div id="commands"></div>
-      <div class="main3">
-        <a class="headline">Vote Me</a>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <div class="main3_join_content_div">
-<a href="https://top.gg/bot/914106027606167602">
-  <img src="https://top.gg/api/widget/914106027606167602.svg">
-</a>
-            </div>
-          </div>
-         
-                </div>
-              </div>
-            </div>
-    <footer class="copyright_div">
-      <a href="#" class="copyright">2024 © Max Giveaway</a>
-            <a href="pp.html">Privacy Policy</a>
-                  <a href="term.html">T&C</a>
 
-    </footer>
-  </body>
+    <div class="container">
+        <header>
+            <h1>Discover Max Giveaway</h1>
+            <p>The ultimate Discord bot for hosting seamless and exciting giveaways.</p>
+            <a href="https://yourbotinvite.link" class="cta-button">Invite Max Giveaway Now</a>
+        </header>
+
+        <section class="features">
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Easy Setup</h3>
+                <p>Start using Max Giveaway in just minutes with our straightforward setup process.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>10+ Languages Supported</h3>
+                <p>Interact with Max Giveaway in your preferred language, with support for over 10 languages.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3>Customizable Giveaways</h3>
+                <p>Create giveaways tailored to your community, with options for custom entry requirements and more.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Fair</h3>
+                <p>Max Giveaway ensures a fair and secure selection process for all participants.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-hand-pointer"></i>
+                </div>
+                <h3>Button Reactions</h3>
+                <p>Engage with giveaways easily through interactive button reactions for seamless participation.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>24/7 Uptime</h3>
+                <p>Max Giveaway is always online, ensuring your giveaways run without any interruptions.</p>
+            </div>
+        </section>
+
+        <div id="discord"></div>
+        <div class="main4">
+            <a class="headline">Join the Discord</a>
+            <div class="main4_dc_div">
+                <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1215562434941820979&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <div class="main4_dc_description_div">
+                    <a class="main4_dc_description_title">Let's talk!</a>
+                    <a class="main4_dc_description">・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br> </a>
+                    <a href="https://discord.gg/keVs6PBGbh" class="main4_dc_button_a">
+                        <div class="main4_dc_button">Join</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="topgg-widget-container">
+            <a href="https://top.gg/bot/914106027606167602">
+                <img src="https://top.gg/api/widget/914106027606167602.svg" alt="Max Giveaway on Top.gg">
+            </a>
+        </div>
+        <footer>
+            <p>&copy; 2024 Max Giveaway. All rights reserved.</p>
+            <p><a href="pp.html">Privacy Policy</a> | <a href="t&c.html">Terms & Conditions</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to check if an element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach(function(feature) {
+                if (isInViewport(feature)) {
+                    feature.classList.add('visible');
+                }
+            });
+        });
+
+        // Trigger scroll event on page load to show features already in viewport
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+
+</body>
 </html>
